@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import os
 import fitz
 
@@ -19,9 +16,6 @@ from langchain_openai import ChatOpenAI
 from sentence_transformers import SentenceTransformer
 
 
-# In[2]:
-
-
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -29,9 +23,6 @@ def get_pdf_text(pdf_docs):
         for page in doc:
             text += page.get_text("text") + "\n"
     return text
-
-
-# In[3]:
 
 
 def get_text_chunks(text):
@@ -44,15 +35,9 @@ def get_text_chunks(text):
     return text_splitter.split_text(text)
 
 
-# In[4]:
-
-
 def get_vectorstore(text_chunks):
     embeddings = HuggingFaceEmbeddings()
     return FAISS.from_texts(texts=text_chunks, embedding=embeddings)
-
-
-# In[5]:
 
 
 def get_llm():
@@ -63,17 +48,11 @@ def get_llm():
         temperature=0
     )
     return llm
-
-
-# In[6]:
-
+    
 
 def get_chat_memory():
     return ConversationBufferWindowMemory(k=5, memory_key="chat_history", return_messages=True)
-
-
-# In[7]:
-
+    
 
 def get_prompt_template():
     prompt_text = """
@@ -89,16 +68,10 @@ def get_prompt_template():
     return ChatPromptTemplate.from_template(prompt_text)
 
 
-# In[8]:
-
-
 def create_question_generator():
     llm = get_llm()
     prompt_template = get_prompt_template()
     return LLMChain(llm=llm, prompt=prompt_template)
-
-
-# In[9]:
 
 
 def get_conversation_chain(vectorstore):
@@ -114,21 +87,11 @@ def get_conversation_chain(vectorstore):
     return conversation_chain
 
 
-# In[10]:
-
-
 def load_pdfs_from_folder(folder_path):
     pdf_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.pdf')]
-
-    print("\n📂 PDFs carregados:")
-    for pdf in pdf_files:
-        print(f" - {pdf}")
     
     return pdf_files
-
-
-# In[11]:
-
+    
 
 class ChatBotFAQ:
     def __init__(self, pdf_folder_path):
@@ -145,12 +108,8 @@ class ChatBotFAQ:
         
         return response["answer"]
         
-pdf_folder_path = "/home/embs/Downloads/pasta_pdfs_tcc"
+pdf_folder_path = ("./pdfs")
 chatbot = ChatBotFAQ(pdf_folder_path)
-
-
-# In[39]:
-
 
 question = input("Ask me anything about UFRPE and our rules: ")
 answer = chatbot.ask_question(question)
