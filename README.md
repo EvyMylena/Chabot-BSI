@@ -35,10 +35,17 @@ cd chatbot-bsi-ufrpe
 
 ---
 
-### 2. Crie um ambiente virtual
-
-python -m venv venv
-source venv/bin/activate  # ou venv\Scripts\activate no Windows
+passo_2:
+  titulo: "Crie um ambiente virtual"
+  opcoes:
+    - sistema: "Linux/macOS"
+      comandos:
+        - "python3 -m venv venv"
+        - "source venv/bin/activate"
+    - sistema: "Windows"
+      comandos:
+        - "python -m venv venv"
+        - "venv\\Scripts\\activate"
 
 ---
 
