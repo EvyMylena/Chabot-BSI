@@ -31,7 +31,7 @@ st.markdown("""
 st.title("Smart Chatbot do Curso de BSI da UFRPE")
 st.write("Bem-vindo ao ChatBot do curso de Bacharelado em Sistemas de Informação da UFRPE. Faça perguntas sobre regras, disciplinas, programas e mais!")
 
-pdf_folder_path = "/home/embs/Documentos/normas_ufrpe"
+pdf_folder_path = "pdfs"
 if not os.path.exists(pdf_folder_path):
     st.error(f"Pasta '{pdf_folder_path}' não encontrada. Certifique-se de que os PDFs estão na pasta correta.")
     st.stop()
@@ -49,7 +49,6 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 if prompt := st.chat_input("Digite sua pergunta aqui"):
-    # Adicionar a pergunta do usuário ao histórico
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
