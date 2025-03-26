@@ -35,19 +35,19 @@ cd chatbot-bsi-ufrpe
 
 ---
 
-2. Para criar um ambiente virtual
+### 2. Crie um ambiente virtual 
 
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
 
-3. Instale as dependências
+### 3. Instale as dependências
 
 pip install -r requirements.txt
 
-4. Configure sua API Key
+### 4. Configure sua API Key
 
 openai_api_key="sk-..." # substitua no arquivo chatbot.py
 
-5. Rode a aplicação
+### 5. Rode a aplicação
 
 streamlit run app.py
