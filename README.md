@@ -27,7 +27,15 @@ Este é um chatbot desenvolvido para responder dúvidas frequentes sobre o curso
 
 ## 📁 Estrutura do Projeto
 
-chatbot-bsi-ufrpe/ │ ├── streamlit-app.py # Interface principal com o usuário (Streamlit) ├── chatbot.py # Lógica de processamento e resposta do chatbot ├── requirements.txt # Lista de dependências ├── README.md # Este arquivo └── normas_ufrpe/ # Pasta contendo os PDFs com as normas da UFRPE
+chatbot-bsi-ufrpe/
+│
+├── streamlit-app.py # Interface principal com o usuário (Streamlit)
+├── chatbot.py # Lógica de processamento e resposta do chatbot
+├── requirements.txt # Lista de dependências
+├── README.md
+└── pdfs/ # Pasta contendo os PDFs com as normas da UFRPE
+    ├── regulamento.pdf # exemplos
+    └── tcc-normas.pdf
 
 ## 🚀 Como executar o projeto
 
