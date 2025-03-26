@@ -29,7 +29,7 @@ Este é um chatbot desenvolvido para responder dúvidas frequentes sobre o curso
 
 ### 1. Clone o repositório
 
-bash
+```bash
 git clone https://github.com/seu-usuario/chatbot-bsi-ufrpe.git
 cd chatbot-bsi-ufrpe
 
@@ -37,23 +37,23 @@ cd chatbot-bsi-ufrpe
 
 ### 2. Crie um ambiente virtual
 
-python -m venv venv
+```python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
 
 ---
 
 ### 3. Instale as dependências
 
-pip install -r requirements.txt
+```pip install -r requirements.txt
 
 ---
 
 ### 4. Configure sua API Key
 
-openai_api_key="sk-..." # substitua no arquivo chatbot.py
+```openai_api_key="sk-..." # substitua pela sua chave do deepseek no arquivo chatbot.py
 
 ---
 
 ### 5. Rode a aplicação
 
-streamlit run app.py
+```streamlit run app.py
