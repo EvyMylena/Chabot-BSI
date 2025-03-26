@@ -35,10 +35,12 @@ cd chatbot-bsi-ufrpe
 
 ---
 
-### 2. Crie um ambiente virtual 
+### 2. **Crie um ambiente virtual** 
 
 python -m venv venv
 source venv/bin/activate  # ou venv\Scripts\activate no Windows
+
+---
 
 ### 3. Instale as dependências
 
