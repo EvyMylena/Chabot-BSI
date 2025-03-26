@@ -1,6 +1,6 @@
 # 🤖 ChatBot BSI UFRPE
 
-Este é um chatbot desenvolvido para responder dúvidas frequentes sobre o curso de **Bacharelado em Sistemas de Informação (BSI)** da **Universidade Federal Rural de Pernambuco (UFRPE)**. Ele utiliza processamento de linguagem natural e aprendizado de máquina para fornecer respostas com base em documentos oficiais da instituição.
+Este é um chatbot foi desenvolvido para o Trabalho de Conclusão do curso de **Bacharelado em Sistemas de Informação (BSI)** da **Universidade Federal Rural de Pernambuco (UFRPE)** com a finalidade responder perguntas frequentes dos alunos. Ele utiliza processamento de linguagem natural e aprendizado de máquina para fornecer respostas com base em documentos oficiais da instituição.
 
 ---
 
@@ -85,3 +85,15 @@ openai_api_key="sk-..." # substitua pela sua chave do deepseek no arquivo chatbo
 ```bash
 streamlit run app.py
 ```
+
+## 🧠 Exemplos de perguntas que o ChatBot pode responder
+- Quais são as regras para trancamento de disciplina?
+- Qual a carga horária mínima por semestre?
+- Como funcionam os estágios supervisionados?
+
+## 📌 Observações
+- O chatbot não gera respostas fora dos documentos carregados.
+- Garanta que os PDFs estejam bem estruturados e legíveis para melhor desempenho.
+
+## 👨‍💻 Autor
+Desenvolvido por [Evelyn Mylena Bezerra e Silva] para o Trabalho de Conclusão de Curso - BSI/UFRPE.
