@@ -25,6 +25,10 @@ Este é um chatbot desenvolvido para responder dúvidas frequentes sobre o curso
 
 ---
 
+## 📁 Estrutura do Projeto
+
+chatbot-bsi-ufrpe/ │ ├── streamlit-app.py # Interface principal com o usuário (Streamlit) ├── chatbot.py # Lógica de processamento e resposta do chatbot ├── requirements.txt # Lista de dependências ├── README.md # Este arquivo └── normas_ufrpe/ # Pasta contendo os PDFs com as normas da UFRPE
+
 ## 🚀 Como executar o projeto
 
 ### 1. Clone o repositório
@@ -32,10 +36,13 @@ Este é um chatbot desenvolvido para responder dúvidas frequentes sobre o curso
 ```bash
 git clone https://github.com/seu-usuario/chatbot-bsi-ufrpe.git
 cd chatbot-bsi-ufrpe
+```
 
 ---
 
 ### 2. Crie um ambiente virtual
+
+```bash
 💻 No Linux/macOS:
 
 python3 -m venv venv
@@ -45,21 +52,28 @@ source venv/bin/activate
 
 python -m venv venv
 venv\Scripts\activate
+```
 
 ---
 
 ### 3. Instale as dependências
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ### 4. Configure sua API Key
 
+```bash
 openai_api_key="sk-..." # substitua pela sua chave do deepseek no arquivo chatbot.py
+```
 
 ---
 
 ### 5. Rode a aplicação
 
+```bash
 streamlit run app.py
+```
